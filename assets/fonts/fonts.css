@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Brice';
+    src: local('Brice Regular Semi Expanded'), local('Brice-Regular-Semi-Expanded'),
+        url('Brice-RegularSemiExpanded.woff2') format('woff2'),
+        url('Brice-RegularSemiExpanded.woff') format('woff'),
+        url('Brice-RegularSemiExpanded.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ABeeZee';
+    src: local('ABeeZee Regular'), local('ABeeZee-Regular'),
+        url('ABeeZee-Regular.woff2') format('woff2'),
+        url('ABeeZee-Regular.woff') format('woff'),
+        url('ABeeZee-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
