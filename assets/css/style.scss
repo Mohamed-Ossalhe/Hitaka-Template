@@ -141,9 +141,46 @@ header {
                     margin: 4rem 0;
                     font-size: 2rem;
                     a {
+                        position: relative;
                         padding: 0.5rem 1.5rem;
                         color: $accent-clr;
                         text-transform: capitalize;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            bottom: -10px;
+                            left: 0;
+                            height: 4px;
+                            width: 50%;
+                            background-color: $secondary-clr;
+                            border-radius: 22px;
+                            transform: scaleX(0);
+                            transform-origin: right;
+                            transition: transform .3s;
+                        }
+                        &:hover {
+                            color: $secondary-clr;
+                        }
+                        &:hover::before {
+                            transform: scaleX(1);
+                            transform-origin: left;
+                        }
+                    }
+                    a.active {
+                        color: $secondary-clr;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            bottom: -10px;
+                            left: 50%;
+                            height: 5px;
+                            width: 5px;
+                            background-color: $secondary-clr;
+                            border-radius: 22px;
+                            transform: scaleX(1) translateX(-50%);
+                            transform-origin: right;
+                            transition: transform .3s;
+                        }
                     }
                 }
             }
@@ -550,12 +587,19 @@ footer {
 .our-places-section {
     .our-places-wrapper {
         padding: 4rem 0;
+        .map {
+            iframe {
+                border-radius: 5px;
+                filter: grayscale(1);
+            }
+        }
         .places {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, auto));
             justify-items: center;
             gap: 3rem;
             text-align: center;
+            margin: 4rem 0;
             div > h3 {
                 margin-bottom: 1rem;
                 font-size: 1.50rem;
@@ -1000,7 +1044,6 @@ footer {
                 justify-items: start;
                 text-align: left;
                 justify-content: space-between;
-                margin: 4rem 0;
             }
         }
     }
