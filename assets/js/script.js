@@ -38,3 +38,13 @@ function manageMeals() {
         element.style.display = 'block';
     })
 }
+
+// Products Cart
+let cartIcon = document.querySelector(".cart");
+let productsCart = document.querySelector(".meals-cart");
+
+const revealCart = () => {
+    productsCart.classList.toggle("cart-active");
+}
+
+cartIcon.addEventListener("click", revealCart);

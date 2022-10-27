@@ -9,6 +9,7 @@
 }
 
 body {
+  position: relative;
   font-family: "ABeeZee";
 }
 
@@ -646,6 +647,48 @@ footer .footer-wrapper .cpyright-section .social-contact .social-links li a {
 .menu-meals .menu-meals-wrapper .meal .card-content .btns .add-to-cart {
   font-size: 40px;
   cursor: pointer;
+}
+
+.meals-cart {
+  display: none;
+  position: absolute;
+  top: 7.5rem;
+  right: 0;
+  width: 100%;
+  min-height: 300px;
+  background-color: #fff;
+}
+.meals-cart .cart-wrapper {
+  padding: 2rem 3rem;
+  text-align: center;
+}
+.meals-cart .cart-wrapper h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.meals-cart .cart-wrapper .product {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: #FCFBF0;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(163, 176, 218, 0.47);
+  text-align: center;
+}
+.meals-cart .cart-wrapper .product h3 {
+  font-size: 1.5rem;
+}
+.meals-cart .cart-wrapper .product .price-quantity p:not(:last-of-type) {
+  font-size: 1.75rem;
+}
+.meals-cart .cart-wrapper .product .price-quantity p:last-of-type {
+  font-size: 1.2rem;
+}
+
+.meals-cart.cart-active {
+  display: block;
 }
 
 @media screen and (min-width: 992px) {
