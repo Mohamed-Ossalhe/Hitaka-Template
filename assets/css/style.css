@@ -52,6 +52,13 @@ button:hover {
   outline: 2px solid #B50D0D;
 }
 
+button.clear {
+  background-color: #FCFBF0;
+  border: 2px solid #B50D0D;
+  color: #B50D0D;
+  margin-top: 5px;
+}
+
 .main-heading {
   margin: 0 0 4rem 0;
   text-align: center;
@@ -99,10 +106,23 @@ header .header-wrapper .header-btns {
   gap: 1rem;
 }
 header .header-wrapper .header-btns div {
+  position: relative;
   cursor: pointer;
 }
 header .header-wrapper .header-btns div i {
   font-size: 40px;
+}
+header .header-wrapper .header-btns div span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1rem;
+  height: 20px;
+  width: 20px;
+  background: red;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
 }
 header .header-wrapper .navigation {
   display: flex;
@@ -651,16 +671,19 @@ footer .footer-wrapper .cpyright-section .social-contact .social-links li a {
 
 .meals-cart {
   display: none;
-  position: absolute;
-  top: 7.5rem;
+  position: fixed;
+  top: 7rem;
   right: 0;
   width: 100%;
   min-height: 300px;
   background-color: #fff;
+  z-index: 2;
 }
 .meals-cart .cart-wrapper {
+  height: 100%;
   padding: 2rem 3rem;
   text-align: center;
+  overflow-y: scroll;
 }
 .meals-cart .cart-wrapper h2 {
   margin-bottom: 2rem;
@@ -669,6 +692,7 @@ footer .footer-wrapper .cpyright-section .social-contact .social-links li a {
 .meals-cart .cart-wrapper .product {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
   padding: 1.5rem;
   margin-bottom: 2rem;
@@ -676,6 +700,9 @@ footer .footer-wrapper .cpyright-section .social-contact .social-links li a {
   border-radius: 5px;
   box-shadow: 0 10px 30px rgba(163, 176, 218, 0.47);
   text-align: center;
+}
+.meals-cart .cart-wrapper .product img {
+  width: 100px;
 }
 .meals-cart .cart-wrapper .product h3 {
   font-size: 1.5rem;
@@ -686,9 +713,33 @@ footer .footer-wrapper .cpyright-section .social-contact .social-links li a {
 .meals-cart .cart-wrapper .product .price-quantity p:last-of-type {
   font-size: 1.2rem;
 }
+.meals-cart .cart-wrapper .total-price {
+  font-size: 1.75rem;
+}
 
 .meals-cart.cart-active {
   display: block;
+}
+
+.purchase-success {
+  display: none;
+  position: absolute;
+  top: 5%;
+  left: 40%;
+  width: 30rem;
+  height: 100%;
+  border-radius: 5px;
+  z-index: 3;
+}
+.purchase-success .purchase-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  background-color: turquoise;
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -977,5 +1028,38 @@ footer .footer-wrapper .cpyright-section .social-contact .social-links li a {
   }
   .filters .filters-wrapper .filter {
     min-width: 100px;
+  }
+  .meals-cart {
+    top: 6rem;
+    width: 50%;
+  }
+  .meals-cart .cart-wrapper {
+    height: 100%;
+    padding: 2rem 3rem;
+    text-align: center;
+    overflow-y: scroll;
+  }
+  .meals-cart .cart-wrapper h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .meals-cart .cart-wrapper .product {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .meals-cart .cart-wrapper .product img {
+    width: 70px;
+  }
+  .meals-cart .cart-wrapper .product h3 {
+    font-size: 1rem;
+  }
+  .meals-cart .cart-wrapper .product .price-quantity p:not(:last-of-type) {
+    font-size: 1.5rem;
+  }
+  .meals-cart .cart-wrapper .product .price-quantity p:last-of-type {
+    font-size: 1.05rem;
   }
 }/*# sourceMappingURL=style.css.map */

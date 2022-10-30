@@ -27,7 +27,7 @@
                     </div>
                     <div class="header-btns">
                         <div class="menu-burger"><i class="bx bx-menu"></i></div>
-                        <div class="cart"><i class="bx bx-basket"></i></div>
+                        <div class="cart"><span class="quantity-span">0</span><i class="bx bx-basket"></i></div>
                     </div>
                     <nav class="navigation">
                         <div class="close-menu"><i class="bx bx-x"></i></div>
@@ -188,7 +188,7 @@
                             <img src="assets/imgs/dessert-3.png" alt="cherry blossom dome dessert" width="40%">
                             <div class="text">
                                 <h3>cherry blossom dome</h3>
-                                <p class="price">$200</p>
+                                <p class="price">$100</p>
                             </div>
                             <div class="btns">
                                 <div class="rate"><i class="bx bxs-star"></i><p>4.7</p></div>
@@ -203,7 +203,7 @@
                             <img src="assets/imgs/sashimi-2.png" alt="tuna sashimi" width="40%">
                             <div class="text">
                                 <h3>tuna sashimi</h3>
-                                <p class="price">$200</p>
+                                <p class="price">$300</p>
                             </div>
                             <div class="btns">
                                 <div class="rate"><i class="bx bxs-star"></i><p>4.7</p></div>
@@ -300,6 +300,36 @@
                 </div>
             </div>
         </footer>
+        <!-- cart component -->
+        <div class="meals-cart">
+            <div class="container">
+                <div class="cart-wrapper">
+                    <h2>Your cart</h2>
+                    <div class="cart-products">
+                        <!-- product -->
+                        <!-- <div class="product">
+                            <img src="assets/imgs/dessert-1.png" alt="" width="100%">
+                            <h3>strawberry mochi</h3>
+                            <div class="price-quantity">
+                                <p>$200</p>
+                                <p>Quantity: 3</p>
+                            </div>
+                        </div> -->
+                    </div>
+                    <p class="total-price">Total: </p>
+                    <button class="purchase-cart">Purchase Cart</button>
+                    <button class="clear-cart clear">Clear Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="purchase-success">
+            <div class="container">
+                <div class="purchase-wrapper">
+                    <i class='bx bxs-check-circle'></i>
+                    <p>Cart Purchased Successfuly</p>
+                </div>
+            </div>
+        </div>
         <script src="./assets/js/script.js"></script>
     </body>
 </html>
