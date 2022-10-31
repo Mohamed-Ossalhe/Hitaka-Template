@@ -73,17 +73,27 @@ function selectClickedItem(e){
 let mealsCart = document.querySelector(".cart-products");
 let total = 0;
 let totalElement = document.querySelector(".total-price");
+// purchase btn
+// PURCHASE or Clear CART
+let purchaseBtn = document.querySelector(".purchase-cart");
+let purchaseModal = document.querySelector(".purchase-success-modal");
+// clear btn
+let clearBtn = document.querySelector(".clear-cart");
+let clearModal = document.querySelector(".clear-caution-modal");
+purchaseBtn.addEventListener("click", purchaseCart);
+clearBtn.addEventListener("click", clearCart);
+
+// add Item to cart
 function addItemToCart(img, title, price) {
     let quantityCountSpan = document.querySelector(".quantity-span");
     let itemCard = `
     <!-- product -->
     <div class="product">
-        <img src="${img}" alt="" width="100%">
-        <h3 class="product-title">${title}</h3>
-        <div class="price-quantity">
-            <p>${price}</p>
-            <p>Quantity: </p>
-        </div>
+    <img src="${img}" alt="" width="100%">
+    <h3 class="product-title">${title}</h3>
+    <div class="price-quantity">
+    <p>${price}</p>
+    </div>
     </div>`;
     mealsCart.innerHTML += itemCard;
     // total products in cart
@@ -91,34 +101,31 @@ function addItemToCart(img, title, price) {
     // update total
     let productPrice = price.replace("$", "");
     total += parseInt(productPrice);
-    totalElement.innerText = `Total : ${total}`;
-
+    totalElement.innerText = `Total : $ ${total}`;
+    
 }
-
-// PURCHASE CART
-let purchaseBtn = document.querySelector(".purchase-cart");
-let purchaseModal = document.querySelector(".purchase-success");
-purchaseBtn.addEventListener("click", purchaseCart);
+// purchase items
 function purchaseCart() {
     mealsCart.innerText = "";
     document.querySelector(".quantity-span").innerText = 0;
     count = 1;
     total = 0;
     totalElement.innerText = "Total : ";
-    purchaseModal.style.display = 'block';
+    purchaseModal.style.display = 'flex';
     setInterval(()=>{
         purchaseModal.style.display = 'none';
-    }, 2000);
+    }, 3000);
 }
 
-//! ================================
-//* ==== Clear Cart Function =======
-//! ================================
-let clearBtn = document.querySelector(".clear-cart").addEventListener("click", clearCart);
+// clear cart
 function clearCart() {
     mealsCart.innerText = "";
     document.querySelector(".quantity-span").innerText = 0;
     count = 1;
     total = 0;
     totalElement.innerText = "Total : ";
+    clearModal.style.display = 'flex';
+    setInterval(()=>{
+        clearModal.style.display = 'none';
+    }, 3000);
 }

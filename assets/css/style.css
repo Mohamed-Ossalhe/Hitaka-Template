@@ -533,6 +533,19 @@ footer .footer-wrapper .cpyright-section .social-contact .social-links li a {
 .contact-info-form .contact-wrapper .contact-form {
   padding-top: 4rem;
 }
+.contact-info-form .contact-wrapper .contact-form h3 {
+  margin-bottom: 1rem;
+}
+.contact-info-form .contact-wrapper .contact-form .form-message {
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 1rem 3rem;
+  background-color: rgba(181, 13, 13, 0.2980392157);
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
 .contact-info-form .contact-wrapper .contact-form form input, .contact-info-form .contact-wrapper .contact-form form textarea, .contact-info-form .contact-wrapper .contact-form form button {
   width: 100%;
 }
@@ -547,6 +560,15 @@ footer .footer-wrapper .cpyright-section .social-contact .social-links li a {
 .contact-info-form .contact-wrapper .contact-form form input[type=text]:focus, .contact-info-form .contact-wrapper .contact-form form input[type=email]:focus, .contact-info-form .contact-wrapper .contact-form form textarea:focus {
   border-bottom-color: #B50D0D;
   outline: none;
+}
+.contact-info-form .contact-wrapper .contact-form form input[type=email].invalid {
+  border-bottom-color: red;
+}
+.contact-info-form .contact-wrapper .contact-form form input[type=email].valid {
+  border-bottom-color: rgb(0, 128, 115);
+}
+.contact-info-form .contact-wrapper .contact-form form .submit-form:disabled {
+  opacity: 0.5;
 }
 
 .our-places-section .our-places-wrapper {
@@ -685,6 +707,25 @@ footer .footer-wrapper .cpyright-section .social-contact .social-links li a {
   text-align: center;
   overflow-y: scroll;
 }
+.meals-cart .cart-wrapper .modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+.meals-cart .cart-wrapper .purchase-success-modal {
+  background-color: rgba(90, 255, 156, 0.3);
+  color: rgb(0, 186, 75);
+  box-shadow: 0 10px 30px rgba(90, 255, 156, 0.3);
+}
+.meals-cart .cart-wrapper .clear-caution-modal {
+  background-color: rgba(255, 247, 90, 0.3);
+  color: rgb(177, 186, 0);
+  box-shadow: 0 10px 30px rgba(90, 255, 156, 0.3);
+}
 .meals-cart .cart-wrapper h2 {
   margin-bottom: 2rem;
   font-size: 2rem;
@@ -719,27 +760,6 @@ footer .footer-wrapper .cpyright-section .social-contact .social-links li a {
 
 .meals-cart.cart-active {
   display: block;
-}
-
-.purchase-success {
-  display: none;
-  position: absolute;
-  top: 5%;
-  left: 40%;
-  width: 30rem;
-  height: 100%;
-  border-radius: 5px;
-  z-index: 3;
-}
-.purchase-success .purchase-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1.5rem 2rem;
-  background-color: turquoise;
-  color: #fff;
-  font-size: 1.5rem;
 }
 
 @media screen and (min-width: 992px) {
