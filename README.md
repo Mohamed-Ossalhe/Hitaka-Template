@@ -7,6 +7,9 @@ in addition to the SEO to make it stands in the front when someone searches for 
 **Preview my Work**:
 - ***https://www.figma.com/file/RCKMkMvhX7gVPHkVX0rLhS/Hitaka-Template?node-id=24%3A531***
 
+**Live Demo**:
+- ***https://mohamed-ossalhe.github.io/Hitaka-Template/***
+
 **Team:**
 * *our team includes:*
     - OSSALHE Mohamed ( *Responsable of making the Website*)

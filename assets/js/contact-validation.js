@@ -10,6 +10,7 @@ contactEmail.addEventListener("keyup", ()=>{
     if(!regexPattern.test(contactEmail.value)) {
         contactEmail.className = "invalid";
         formMessage.style.display = 'flex';
+        submitBtn.setAttribute("disabled", "disabled");
         formMessage.innerHTML = `
         <i class="bx bxs-error"></i>
         Invalid Email
