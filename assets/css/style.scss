@@ -772,10 +772,9 @@ footer {
     background-color: #fff;
     z-index: 2;
     .cart-wrapper {
-        height: 100%;
+        min-height: 300px;
         padding: 2rem 3rem;
         text-align: center;
-        overflow-y: scroll;
         .modal {
             display: none;
             align-items: center;
@@ -1186,10 +1185,9 @@ footer {
         top: 6rem;
         width: 50%;
         .cart-wrapper {
-            height: 100%;
+            min-height: 300px;
             padding: 2rem 3rem;
             text-align: center;
-            overflow-y: scroll;
             h2 {
                 margin-bottom: 1.5rem;
                 font-size: 1.5rem;
