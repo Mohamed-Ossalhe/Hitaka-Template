@@ -55,4 +55,4 @@ in addition to the SEO to make it stands in the front when someone searches for 
 
     + Vous devez aussi respecter les normes du SEO.
 
-*Brief 3 Loading...!*
+*Brief 3 Done!*
