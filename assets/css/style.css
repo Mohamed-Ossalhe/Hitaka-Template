@@ -1053,9 +1053,10 @@ footer .footer-wrapper .cpyright-section .social-contact .social-links li a {
     width: 50%;
   }
   .meals-cart .cart-wrapper {
-    min-height: 300px;
+    height: 80vh;
     padding: 2rem 3rem;
     text-align: center;
+    overflow-y: scroll;
   }
   .meals-cart .cart-wrapper h2 {
     margin-bottom: 1.5rem;
