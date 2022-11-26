@@ -772,15 +772,17 @@ footer {
     background-color: #fff;
     z-index: 2;
     .cart-wrapper {
-        min-height: 300px;
+        height: 80vh;
         padding: 2rem 3rem;
         text-align: center;
+        overflow-y: scroll;
         .modal {
             display: none;
             align-items: center;
             justify-content: center;
             gap: 1rem;
             padding: 1rem 0;
+            margin: 2rem 0;
             border-radius: 5px;
             font-size: 1.5rem;
         }
@@ -825,6 +827,7 @@ footer {
             }
         }
         .total-price {
+            margin: 2rem 0;
             font-size: 1.75rem;
         }
     }
@@ -1185,10 +1188,8 @@ footer {
         top: 6rem;
         width: 50%;
         .cart-wrapper {
-            height: 80vh;
             padding: 2rem 3rem;
             text-align: center;
-            overflow-y: scroll;
             h2 {
                 margin-bottom: 1.5rem;
                 font-size: 1.5rem;

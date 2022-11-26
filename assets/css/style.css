@@ -702,9 +702,10 @@ footer .footer-wrapper .cpyright-section .social-contact .social-links li a {
   z-index: 2;
 }
 .meals-cart .cart-wrapper {
-  min-height: 300px;
+  height: 80vh;
   padding: 2rem 3rem;
   text-align: center;
+  overflow-y: scroll;
 }
 .meals-cart .cart-wrapper .modal {
   display: none;
@@ -712,6 +713,7 @@ footer .footer-wrapper .cpyright-section .social-contact .social-links li a {
   justify-content: center;
   gap: 1rem;
   padding: 1rem 0;
+  margin: 2rem 0;
   border-radius: 5px;
   font-size: 1.5rem;
 }
@@ -754,6 +756,7 @@ footer .footer-wrapper .cpyright-section .social-contact .social-links li a {
   font-size: 1.2rem;
 }
 .meals-cart .cart-wrapper .total-price {
+  margin: 2rem 0;
   font-size: 1.75rem;
 }
 
@@ -1053,10 +1056,8 @@ footer .footer-wrapper .cpyright-section .social-contact .social-links li a {
     width: 50%;
   }
   .meals-cart .cart-wrapper {
-    height: 80vh;
     padding: 2rem 3rem;
     text-align: center;
-    overflow-y: scroll;
   }
   .meals-cart .cart-wrapper h2 {
     margin-bottom: 1.5rem;
